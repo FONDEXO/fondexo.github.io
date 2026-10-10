@@ -53,32 +53,6 @@ const CONFIG = {
    No necesitas tocarlo para cambiar supuestos.
    ========================================================= */
 
-/* ---------- Menú, modo oscuro y año del pie ---------- */
-(function interfaz() {
-  const btnMenu = document.getElementById('btn-menu');
-  const menu = document.getElementById('menu');
-  btnMenu.addEventListener('click', () => {
-    const abierto = menu.classList.toggle('abierto');
-    btnMenu.setAttribute('aria-expanded', abierto);
-  });
-  menu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') { menu.classList.remove('abierto'); btnMenu.setAttribute('aria-expanded', 'false'); }
-  });
-
-  document.getElementById('btn-tema').addEventListener('click', () => {
-    const raiz = document.documentElement;
-    const actual = raiz.getAttribute('data-theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    const nuevo = actual === 'dark' ? 'light' : 'dark';
-    raiz.setAttribute('data-theme', nuevo);
-    try { localStorage.setItem('fondexo-tema', nuevo); } catch (e) {}
-    document.dispatchEvent(new Event('cambio-tema'));
-  });
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => document.dispatchEvent(new Event('cambio-tema')));
-
-  document.getElementById('anio').textContent = new Date().getFullYear();
-})();
-
 /* ---------- Cálculos ---------- */
 
 // Convierte una tasa anual (0.07) en su equivalente mensual compuesto

@@ -4,23 +4,34 @@
 
 | Archivo | Para qué sirve |
 |---|---|
-| `index.html` | Todos los textos de la página |
-| `estilos.css` | Colores, tipografías y diseño |
-| `comparador.js` | La calculadora CDT vs. cartera. **Los supuestos están arriba, en `CONFIG`** |
-| `imagen-compartir.png` | Imagen que sale al compartir el enlace por WhatsApp o Instagram |
+| `index.html` | Página de inicio: portada, cifras, resumen y llamados |
+| `como-funciona.html` | El problema, los 4 pasos y por qué FONDEXO |
+| `comparador.html` | La calculadora CDT vs. cartera (textos y campos) |
+| `paquetes.html` | Los 3 paquetes |
+| `preguntas.html` | Preguntas frecuentes y contacto |
+| `privacidad.html` | Política de tratamiento de datos (Ley 1581) |
+| `404.html` | Lo que ve alguien que entra a un enlace que no existe |
+| `estilos.css` | Colores, tipografías, diseño y animaciones |
+| `sitio.js` | Menú del celular, modo oscuro y animaciones (común a todas las páginas) |
+| `comparador.js` | Cálculos del comparador. **Los supuestos están arriba, en `CONFIG`** |
+| `imagen-compartir.png` | Imagen que sale al compartir el enlace por WhatsApp |
+| `icono-180.png` | Ícono si alguien guarda la página en la pantalla de inicio del celular |
+| `sitemap.xml` y `robots.txt` | Ayudan a Google a encontrar todas las páginas |
 | `CNAME.ejemplo` | Para conectar tu dominio propio más adelante (ver abajo) |
 
 Para editar un archivo directamente en GitHub: ábrelo en tu repositorio, haz clic en el **lápiz** (✏️ "Edit this file"), haz el cambio y pulsa **Commit changes**. En 1 o 2 minutos la web se actualiza sola.
 
 ## Cambiar textos
 
-Abre `index.html` y busca la frase con **Ctrl + F**. Cambia solo el texto que está entre las etiquetas, por ejemplo:
+Abre la página donde está el texto (ver la tabla de arriba) y busca la frase con **Ctrl + F**. Cambia solo el texto que está entre las etiquetas, por ejemplo:
 
 ```html
 <h3>Solo gano si tú ganas</h3>
 ```
 
-Cada sección está marcada con un comentario como `<!-- ===== 4. POR QUÉ FONDEXO ===== -->`.
+Cada sección está marcada con un comentario como `<!-- ===== EL MUNDO EN TU CARTERA ===== -->`.
+
+**Importante:** el menú de arriba y el pie de página están repetidos en cada página. Si cambias algo ahí (por ejemplo, un texto del pie), cámbialo en todas las páginas `.html`.
 
 ## Cambiar la tasa del CDT y los supuestos del comparador
 
@@ -45,7 +56,7 @@ Escribe los porcentajes como números normales (11 = 11%) y usa **punto** para d
 
 ## Cambiar el enlace del cuestionario o el WhatsApp
 
-En `index.html`, usa **Ctrl + H** (reemplazar) para cambiar todas las veces:
+En **cada página `.html`**, usa **Ctrl + H** (reemplazar) para cambiar todas las veces:
 - `https://claude.ai/artifact/ASpzH1uYoMm1E4fBkif9DN` (cuestionario)
 - `573054318622` (número de WhatsApp)
 
@@ -64,7 +75,7 @@ Espera 1 o 2 minutos y recarga la página. Si no ves el cambio, recarga con **Ct
    - 4 registros **A** para `@` que apunten a: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - 1 registro **CNAME** para `www` que apunte a `fondexo.github.io`
 3. En GitHub: **Settings → Pages → Custom domain**, escribe `fondexo.co` y guarda. Cuando aparezca disponible, activa **Enforce HTTPS**. (GitHub crea solo el archivo `CNAME`; el archivo `CNAME.ejemplo` es solo de referencia y puedes borrarlo.)
-4. En `index.html`, cambia la dirección vieja por `fondexo.co` en las líneas `og:url`, `og:image` y `twitter:image`.
+4. En cada página `.html`, cambia `https://fondexo.github.io/` por `https://fondexo.co/` (con Ctrl + H). Haz lo mismo en `sitemap.xml` y `robots.txt`.
 
 ## Vista previa en WhatsApp
 
