@@ -35,6 +35,9 @@
   --g-franja: rgba(42, 120, 214, 0.16);
   --g-malo: #8e44a8;
   --g-rejilla: #e6ebf2;
+  --g-hist: #12866b;
+  --hist-fondo: #e9f6f1;
+  --hist-tinta: #0e6b55;
 
   --sombra: 0 1px 2px rgba(15, 27, 45, .05), 0 6px 20px rgba(15, 27, 45, .06);
   --sombra-alta: 0 2px 4px rgba(15, 27, 45, .06), 0 14px 34px rgba(15, 27, 45, .10);
@@ -52,7 +55,7 @@
     --tinta: #e9eef6; --tinta-2: #b9c5d6; --tinta-suave: #8e9db2; --linea: #24324a;
     --alerta-fondo: #2c2110; --alerta-tinta: #f3cf8e; --alerta-borde: #6b4d17;
     --marino: #0f1c36;
-    --g-cdt: #e6914a; --g-cartera: #5b9cf0; --g-franja: rgba(91, 156, 240, 0.20); --g-malo: #c286d6; --g-rejilla: #1f2b3f;
+    --g-cdt: #e6914a; --g-cartera: #5b9cf0; --g-franja: rgba(91, 156, 240, 0.20); --g-malo: #c286d6; --g-rejilla: #1f2b3f; --g-hist: #45c29d; --hist-fondo: #0f2a24; --hist-tinta: #6fd8b6;
     --sombra: 0 1px 2px rgba(0, 0, 0, .3); --sombra-alta: 0 10px 30px rgba(0, 0, 0, .4);
     color-scheme: dark;
   }
@@ -64,7 +67,7 @@
   --tinta: #e9eef6; --tinta-2: #b9c5d6; --tinta-suave: #8e9db2; --linea: #24324a;
   --alerta-fondo: #2c2110; --alerta-tinta: #f3cf8e; --alerta-borde: #6b4d17;
   --marino: #0f1c36;
-  --g-cdt: #e6914a; --g-cartera: #5b9cf0; --g-franja: rgba(91, 156, 240, 0.20); --g-malo: #c286d6; --g-rejilla: #1f2b3f;
+  --g-cdt: #e6914a; --g-cartera: #5b9cf0; --g-franja: rgba(91, 156, 240, 0.20); --g-malo: #c286d6; --g-rejilla: #1f2b3f; --g-hist: #45c29d; --hist-fondo: #0f2a24; --hist-tinta: #6fd8b6;
   --sombra: 0 1px 2px rgba(0, 0, 0, .3); --sombra-alta: 0 10px 30px rgba(0, 0, 0, .4);
   color-scheme: dark;
 }
@@ -390,6 +393,45 @@ main { animation: entrar .45s ease both; }
 .lin--media { border-color: var(--g-cartera); }
 .lin--malo { border-color: var(--g-malo); border-top-style: dashed; }
 .lin--franja { height: 10px; border: 0; background: var(--g-franja); border-radius: 2px; }
+.lin--bruto { border-color: var(--g-cartera); border-top-style: dotted; }
+.lin--hist { border-color: var(--g-hist); border-top-width: 3px; }
+
+/* Escenario histórico */
+.historico-caja {
+  border-radius: var(--radio); padding: 18px 20px; background: var(--hist-fondo);
+  border: 1px solid var(--g-hist); border-left-width: 4px;
+}
+.historico-caja__etiqueta { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hist-tinta); margin: 0 0 4px; }
+.historico-caja__titulo { font-weight: 600; margin: 0 0 6px; font-size: .95rem; }
+.historico-caja__fila { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.historico-caja__valor { font-family: var(--fuente-titulos); font-size: clamp(1.6rem, 6vw, 2.2rem); font-weight: 600; margin: 0; font-variant-numeric: tabular-nums lining-nums; }
+.historico-caja__vs { margin: 0; font-weight: 600; color: var(--hist-tinta); font-variant-numeric: tabular-nums; }
+
+/* Botones rápidos de devaluación */
+.atajos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+.atajos button {
+  font: inherit; font-size: .76rem; line-height: 1.25; color: var(--tinta-2); cursor: pointer;
+  background: var(--fondo); border: 1px solid var(--linea); border-radius: 10px; padding: 7px 4px;
+  display: flex; flex-direction: column; align-items: center; gap: 1px; text-align: center;
+  transition: border-color .15s, background-color .15s, color .15s;
+}
+.atajos button strong { font-size: .95rem; color: var(--tinta); font-variant-numeric: tabular-nums; }
+.atajos button:hover { border-color: var(--azul); }
+.atajos button[aria-pressed="true"] { border-color: var(--azul); background: var(--azul-suave); color: var(--azul-texto); }
+.atajos button[aria-pressed="true"] strong { color: var(--azul-texto); }
+
+/* Desglose de la comisión */
+.desglose h3 { font-size: 1.05rem; margin-bottom: .8em; }
+.desglose h3 small { font-family: var(--fuente-texto); font-weight: 500; font-size: .8rem; color: var(--tinta-suave); }
+.desglose dl { margin: 0 0 10px; display: grid; }
+.desglose dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--linea); }
+.desglose dt { color: var(--tinta-2); font-size: .92rem; }
+.desglose dt span { display: block; font-size: .78rem; color: var(--tinta-suave); }
+.desglose dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.desglose__comision dd { color: var(--g-cdt); }
+.desglose__total { border-bottom: 0 !important; }
+.desglose__total dt { color: var(--tinta); font-weight: 600; }
+.desglose__total dd { font-family: var(--fuente-titulos); font-size: 1.35rem; color: var(--azul-texto); }
 .tabla-detalle { margin-top: 12px; font-size: .88rem; }
 .tabla-detalle summary { cursor: pointer; color: var(--azul-texto); font-weight: 600; padding: 6px 0; }
 .tabla-scroll { overflow-x: auto; margin-top: 8px; }
