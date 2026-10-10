@@ -62,7 +62,7 @@ Espera 1 o 2 minutos y recarga la página. Si no ves el cambio, recarga con **Ct
 1. Compra el dominio (por ejemplo en Namecheap, GoDaddy o un proveedor .co).
 2. En el panel DNS del proveedor crea estos registros:
    - 4 registros **A** para `@` que apunten a: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - 1 registro **CNAME** para `www` que apunte a `jjzzapata.github.io`
+   - 1 registro **CNAME** para `www` que apunte a `fondexo.github.io`
 3. En GitHub: **Settings → Pages → Custom domain**, escribe `fondexo.co` y guarda. Cuando aparezca disponible, activa **Enforce HTTPS**. (GitHub crea solo el archivo `CNAME`; el archivo `CNAME.ejemplo` es solo de referencia y puedes borrarlo.)
 4. En `index.html`, cambia la dirección vieja por `fondexo.co` en las líneas `og:url`, `og:image` y `twitter:image`.
 
