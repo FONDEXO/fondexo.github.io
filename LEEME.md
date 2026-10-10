@@ -68,6 +68,8 @@ En **cada página `.html`**, usa **Ctrl + H** (reemplazar) para cambiar todas la
 
 Espera 1 o 2 minutos y recarga la página. Si no ves el cambio, recarga con **Ctrl + Shift + R**.
 
+**Si cambias `estilos.css`, `sitio.js` o `comparador.js`:** sube el número de versión en todas las páginas `.html` (por ejemplo, de `estilos.css?v=2` a `estilos.css?v=3`, con Ctrl + H). Así los celulares que ya visitaron la página descargan el archivo nuevo en lugar de usar el viejo guardado en memoria.
+
 ## Conectar un dominio propio (ej.: fondexo.co)
 
 1. Compra el dominio (por ejemplo en Namecheap, GoDaddy o un proveedor .co).
