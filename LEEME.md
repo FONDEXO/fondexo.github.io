@@ -82,3 +82,10 @@ Espera 1 o 2 minutos y recarga la página. Si no ves el cambio, recarga con **Ct
 ## Vista previa en WhatsApp
 
 WhatsApp guarda la vista previa en memoria durante un tiempo. Si cambias la imagen y no se actualiza, comparte el enlace con algo al final, por ejemplo `?v=2`.
+
+## Seguridad
+
+- Cada página tiene una **política de seguridad** (la línea `Content-Security-Policy` al inicio de cada `.html`). Solo permite cargar código de este sitio, de cdnjs (el gráfico) y de Google Fonts. Si algún día agregas un servicio externo (por ejemplo, analítica), hay que añadir su dirección en esa línea de **todas** las páginas, o el navegador lo bloqueará.
+- Si cambias la pequeña instrucción `<script>` del modo oscuro que está en el encabezado, su "huella" (`sha256-…`) en la política deja de coincidir y el modo oscuro guardado dejaría de funcionar. Pídele a Claude que la recalcule.
+- El gráfico del comparador se carga con una verificación de integridad (`integrity="sha384-…"`). Si cambias la versión de Chart.js, hay que actualizar esa verificación.
+- Activa la **verificación en dos pasos** en tu cuenta de GitHub (Settings → Password and authentication) y exígela en la organización FONDEXO (Settings → Authentication security). Quien entre a tu cuenta podría cambiar la página.

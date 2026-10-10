@@ -14,10 +14,18 @@
   const btnMenu = document.getElementById('btn-menu');
   const menu = document.getElementById('menu');
   if (btnMenu && menu) {
-    btnMenu.addEventListener('click', () => {
-      const abierto = menu.classList.toggle('abierto');
+    const ponerMenu = (abierto) => {
+      menu.classList.toggle('abierto', abierto);
       btnMenu.setAttribute('aria-expanded', abierto);
       btnMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    };
+    btnMenu.addEventListener('click', () => ponerMenu(!menu.classList.contains('abierto')));
+    // Se cierra con la tecla Escape o tocando fuera del menú
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('abierto')) { ponerMenu(false); btnMenu.focus(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('abierto') && !menu.contains(e.target) && !btnMenu.contains(e.target)) ponerMenu(false);
     });
   }
 

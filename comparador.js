@@ -405,7 +405,7 @@ function actualizar() {
   });
   $('r-moneda').textContent = d.enPesos
     ? 'Valores en pesos (COP), con TRM proyectada'
-    : 'Valores en dólares (USD)';
+    : (campos.verPesos.checked ? 'Escribe la TRM de hoy para ver los valores en pesos' : 'Valores en dólares (USD)');
 
   // Avisos
   const avisoMonto = $('aviso-monto');

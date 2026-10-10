@@ -144,7 +144,11 @@ main { animation: entrar .45s ease both; }
 .menu a { color: var(--tinta); text-decoration: none; font-weight: 500; padding: 13px 4px; border-bottom: 1px solid var(--linea); }
 .menu a:last-child { border-bottom: 0; }
 .menu a[aria-current="page"] { color: var(--azul-texto); font-weight: 600; }
+.menu .menu__cta { margin-top: 12px; border: 2px solid var(--azul); color: #fff; padding: 12px 22px; font-weight: 600; }
+:root[data-theme="dark"] .menu .menu__cta { color: #08111f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .menu .menu__cta { color: #08111f; } }
 @media (min-width: 960px) {
+  .menu .menu__solo-movil { display: none; }
   .menu { position: static; display: flex; flex-direction: row; gap: 2px; background: none; border: 0; padding: 0; box-shadow: none; }
   .menu a { border: 0; padding: 8px 12px; font-size: .95rem; color: var(--tinta-2); border-radius: 8px; position: relative; }
   .menu a:hover { color: var(--tinta); background: var(--azul-suave); }
