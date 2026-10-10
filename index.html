@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO: título y descripción (lo que sale en Google) ===== -->
+  <title>FONDEXO | Invierte en los mercados del mundo con acompañamiento personal</title>
+  <meta name="description" content="Acompañamiento personal para invertir en ETFs y acciones globales desde Colombia. Tu dinero queda en tu propia cuenta en XTB, a tu nombre. Desde 600 USD.">
+  <meta name="theme-color" content="#2a78d6">
+
+  <!-- ===== Vista previa al compartir (WhatsApp, Instagram, Facebook) =====
+       IMPORTANTE: cuando cambies de dirección (por ejemplo a fondexo.co),
+       cambia la dirección en las 3 líneas que dicen og:url, og:image y twitter:image -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="FONDEXO">
+  <meta property="og:title" content="FONDEXO | Invierte en los mercados del mundo con acompañamiento personal">
+  <meta property="og:description" content="Tu dinero en tu propia cuenta en XTB, a tu nombre. Perfil de riesgo, cartera global y seguimiento mensual. Desde 600 USD.">
+  <meta property="og:url" content="https://jjzzapata.github.io/fondexo/">
+  <meta property="og:image" content="https://jjzzapata.github.io/fondexo/imagen-compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FONDEXO: inversión global con acompañamiento personal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jjzzapata.github.io/fondexo/imagen-compartir.png">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a78d6'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+
+  <!-- Tipografías: Fraunces (títulos) e Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Aplica el modo claro/oscuro guardado antes de pintar la página -->
+  <script>
+    try { var t = localStorage.getItem('fondexo-tema'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+
+<a class="saltar" href="#inicio">Saltar al contenido</a>
+
+<!-- ===================== MENÚ ===================== -->
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a href="#inicio" class="logo" aria-label="FONDEXO, ir al inicio">FONDE<span>X</span>O</a>
+
+    <nav class="menu" id="menu" aria-label="Secciones">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#por-que">Por qué FONDEXO</a>
+      <a href="#comparador">Comparador</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="cabecera__acciones">
+      <button class="btn-icono" id="btn-tema" type="button" aria-label="Cambiar entre modo claro y oscuro">
+        <svg class="icono-sol" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icono-luna" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="btn-icono btn-menu" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== 1. INICIO ===================== -->
+<section id="inicio" class="hero">
+  <div class="contenedor">
+    <p class="etiqueta">Inversión global · Bogotá, Colombia</p>
+    <h1>Invierte en los mercados del mundo con acompañamiento personal</h1>
+    <p class="hero__sub">Te armo una cartera de ETFs globales y acciones según tu perfil de riesgo, y la seguimos juntos mes a mes. Tu dinero queda siempre en tu propia cuenta en XTB, a tu nombre.</p>
+    <div class="botones">
+      <a class="btn btn--primario" href="https://claude.ai/artifact/ASpzH1uYoMm1E4fBkif9DN" target="_blank" rel="noopener">Descubre tu perfil</a>
+      <a class="btn btn--secundario" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+    </div>
+
+    <dl class="cifras">
+      <div><dt>Capital inicial</dt><dd>desde <strong>600 USD</strong></dd></div>
+      <div><dt>Activos disponibles</dt><dd><strong>+500</strong> acciones y ETFs</dd></div>
+      <div><dt>Tu cuenta</dt><dd>visible <strong>24/7</strong></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===================== 2. EL PROBLEMA ===================== -->
+<section id="problema" class="seccion seccion--alterna">
+  <div class="contenedor">
+    <p class="etiqueta">El punto de partida</p>
+    <h2>Quieres que tu dinero crezca más que en un CDT, pero…</h2>
+    <ul class="rejilla rejilla--4 problemas">
+      <li class="tarjeta">
+        <h3>No sabes por dónde empezar</h3>
+        <p>Miles de acciones y fondos, plataformas distintas y nadie que te explique cuál tiene sentido para ti.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>La información está en inglés</h3>
+        <p>Reportes, noticias y análisis vienen en otro idioma y con términos técnicos.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>No tienes tiempo</h3>
+        <p>Seguir el mercado y revisar cada empresa requiere horas que no tienes.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Te da miedo una estafa</h3>
+        <p>Has visto promesas de rentabilidades imposibles y no sabes en quién confiar.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 3. CÓMO FUNCIONA ===================== -->
+<section id="como-funciona" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">Cómo funciona</p>
+    <h2>Cuatro pasos, todo por escrito</h2>
+    <ol class="pasos">
+      <li>
+        <span class="pasos__num">1</span>
+        <div>
+          <h3>Haces el cuestionario de perfil</h3>
+          <p>Unas preguntas sobre tus metas, tu plazo y cómo reaccionas ante las caídas.</p>
+        </div>
+      </li>
+      <li>
+        <span class="pasos__num">2</span>
+        <div>
+          <h3>Recibes 3 propuestas de cartera</h3>
+          <p>Carteras de ETFs globales y acciones ajustadas a tu perfil, explicadas en español.</p>
+        </div>
+      </li>
+      <li>
+        <span class="pasos__num">3</span>
+        <div>
+          <h3>Abres tu cuenta en XTB y firmamos contrato</h3>
+          <p>La cuenta queda a tu nombre en XTB, un bróker internacional regulado en el exterior. Firmamos un contrato entre las dos partes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="pasos__num">4</span>
+        <div>
+          <h3>Yo hago el seguimiento, tú ves todo 24/7</h3>
+          <p>Seguimiento del mercado, dashboard propio e informe mensual. Tú entras a tu cuenta cuando quieras.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 4. POR QUÉ FONDEXO ===================== -->
+<section id="por-que" class="seccion seccion--alterna">
+  <div class="contenedor">
+    <p class="etiqueta">Por qué FONDEXO</p>
+    <h2>Acompañamiento cercano, reglas claras</h2>
+
+    <div class="destacado">
+      <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10v-6l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h3>Tu dinero nunca pasa por mis manos</h3>
+        <p>Está siempre en tu cuenta en XTB, a tu nombre. Tú la ves 24/7 y puedes retirar cuando quieras.</p>
+      </div>
+    </div>
+
+    <ul class="rejilla rejilla--3">
+      <li class="tarjeta">
+        <h3>Atención personalizada</h3>
+        <p>Perfilamiento, asesoría y atención a tus dudas por WhatsApp todos los días.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Solo gano si tú ganas</h3>
+        <p>Mis intereses están alineados con los tuyos.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Más de 500 activos</h3>
+        <p>Acciones y ETFs de todo el mundo disponibles en XTB.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Desde 600 USD</h3>
+        <p>Un capital inicial accesible para empezar a invertir en el mundo.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Contrato firmado</h3>
+        <p>Todo queda por escrito y firmado entre las dos partes.</p>
+      </li>
+      <li class="tarjeta">
+        <h3>Transparencia total</h3>
+        <p>Dashboard propio, informe mensual y reglas escritas para cada compra.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 5. COMPARADOR ===================== -->
+<section id="comparador" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">Comparador</p>
+    <h2>CDT vs. cartera global a largo plazo</h2>
+    <p class="intro">Compara con tus propios números. Mostramos rangos y la posibilidad de un año malo, porque en bolsa no existe una cifra garantizada.</p>
+
+    <div class="comparador">
+      <!-- Datos que mete el usuario -->
+      <form class="panel comparador__datos" id="form-comparador" novalidate autocomplete="off">
+        <div class="campo">
+          <label for="monto">Monto inicial (USD)</label>
+          <input type="number" id="monto" inputmode="decimal" min="0" step="50">
+          <p class="aviso aviso--alerta" id="aviso-monto" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="aporte">Aporte mensual (USD)</label>
+          <input type="number" id="aporte" inputmode="decimal" min="0" step="10">
+        </div>
+
+        <div class="campo">
+          <label for="plazo">Plazo</label>
+          <select id="plazo"></select>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Perfil de la cartera</legend>
+          <div class="segmentos" id="perfiles"></div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="tasa-cdt">Tasa del CDT (E.A.) <output id="tasa-cdt-valor" for="tasa-cdt"></output></label>
+          <input type="range" id="tasa-cdt">
+          <p class="nota" id="nota-cdt"></p>
+        </div>
+
+        <div class="campo">
+          <label for="retencion">Retención en la fuente sobre intereses (%)</label>
+          <input type="number" id="retencion" inputmode="decimal" min="0" max="20" step="0.5">
+          <p class="nota">Depende de tu situación tributaria. Consulta con tu contador.</p>
+        </div>
+
+        <div class="campo">
+          <label for="devaluacion">Devaluación anual del peso frente al dólar <output id="devaluacion-valor" for="devaluacion"></output></label>
+          <input type="range" id="devaluacion">
+          <p class="nota">El CDT está en pesos y la cartera en dólares. Para compararlos en la misma moneda, si el peso se devalúa (valor positivo) tu CDT vale menos en dólares; si se revalúa (valor negativo), vale más.</p>
+        </div>
+
+        <div class="campo campo--pesos">
+          <label class="check"><input type="checkbox" id="ver-pesos"> Ver resultados en pesos colombianos</label>
+          <div id="caja-trm" hidden>
+            <label for="trm">TRM de hoy (pesos por dólar)</label>
+            <input type="number" id="trm" inputmode="decimal" min="1" step="1" placeholder="Ej: 4000">
+            <p class="nota">Escribe la TRM del día. Los valores futuros en pesos se calculan con la devaluación que elegiste.</p>
+          </div>
+        </div>
+      </form>
+
+      <!-- Resultados -->
+      <div class="comparador__resultados">
+        <p class="aviso aviso--alerta aviso--grande" id="aviso-plazo" hidden></p>
+
+        <div class="resultados" aria-live="polite">
+          <div class="resultado">
+            <p class="resultado__titulo"><span class="marca marca--cdt"></span>CDT al final</p>
+            <p class="resultado__cifra" id="r-cdt">–</p>
+            <p class="resultado__detalle">Resultado garantizado</p>
+          </div>
+          <div class="resultado resultado--cartera">
+            <p class="resultado__titulo"><span class="marca marca--cartera"></span>Cartera al final (escenario medio)</p>
+            <p class="resultado__cifra" id="r-cartera">–</p>
+            <p class="resultado__detalle">Rango: <span id="r-rango">–</span></p>
+          </div>
+          <div class="resultado">
+            <p class="resultado__titulo">Diferencia (cartera media − CDT)</p>
+            <p class="resultado__cifra" id="r-diferencia">–</p>
+            <p class="resultado__detalle">Con un año malo: <span id="r-malo">–</span></p>
+          </div>
+          <div class="resultado">
+            <p class="resultado__titulo">Total aportado</p>
+            <p class="resultado__cifra" id="r-aportado">–</p>
+            <p class="resultado__detalle" id="r-moneda">Valores en dólares (USD)</p>
+          </div>
+        </div>
+
+        <figure class="panel grafico">
+          <figcaption class="grafico__titulo">Cómo podría evolucionar tu dinero</figcaption>
+          <div class="leyenda" aria-hidden="true">
+            <span><i class="lin lin--cdt"></i>CDT (en la misma moneda)</span>
+            <span><i class="lin lin--media"></i>Cartera: escenario medio</span>
+            <span><i class="lin lin--franja"></i>Cartera: rango pesimista–optimista</span>
+            <span><i class="lin lin--malo"></i>Cartera con un año malo</span>
+          </div>
+          <div class="grafico__lienzo">
+            <canvas id="grafico" role="img" aria-label="Gráfico de la evolución del CDT y de la cartera global. La tabla de abajo tiene los mismos datos."></canvas>
+          </div>
+          <details class="tabla-detalle">
+            <summary>Ver los datos en tabla, año por año</summary>
+            <div class="tabla-scroll"><table id="tabla"></table></div>
+          </details>
+        </figure>
+
+        <div class="saber">
+          <h3>Lo que tienes que saber</h3>
+          <ul id="lista-saber"></ul>
+        </div>
+
+        <p class="nota nota--supuestos" id="nota-supuestos"></p>
+
+        <div class="botones">
+          <a class="btn btn--primario" href="https://claude.ai/artifact/ASpzH1uYoMm1E4fBkif9DN" target="_blank" rel="noopener">Descubre qué perfil eres</a>
+          <a class="btn btn--secundario" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO" target="_blank" rel="noopener">Habla conmigo por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. PAQUETES ===================== -->
+<section id="paquetes" class="seccion seccion--alterna">
+  <div class="contenedor">
+    <p class="etiqueta">Paquetes</p>
+    <h2>Empieza por tu perfil, sin costo</h2>
+    <div class="rejilla rejilla--3 paquetes">
+      <article class="paquete">
+        <p class="paquete__precio">Gratis</p>
+        <h3>Perfil FONDEXO</h3>
+        <ul>
+          <li>Cuestionario de perfil de riesgo</li>
+          <li>3 propuestas de cartera</li>
+        </ul>
+        <a class="btn btn--secundario" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO%20(paquete%20Perfil%20FONDEXO)" target="_blank" rel="noopener">Pregunta por WhatsApp</a>
+      </article>
+      <article class="paquete">
+        <p class="paquete__precio">Paso 2</p>
+        <h3>Inicio</h3>
+        <ul>
+          <li>Apertura guiada de tu cuenta en XTB</li>
+          <li>Cartera inicial</li>
+          <li>Firma del contrato</li>
+        </ul>
+        <a class="btn btn--secundario" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO%20(paquete%20Inicio)" target="_blank" rel="noopener">Pregunta por WhatsApp</a>
+      </article>
+      <article class="paquete paquete--destacado">
+        <p class="paquete__precio">Paso 3</p>
+        <h3>Acompañamiento</h3>
+        <ul>
+          <li>Seguimiento del mercado</li>
+          <li>Dashboard propio</li>
+          <li>Informe mensual</li>
+          <li>Alertas y atención por WhatsApp todos los días</li>
+          <li>Revisión de cada empresa tras sus resultados</li>
+        </ul>
+        <a class="btn btn--primario" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO%20(paquete%20Acompa%C3%B1amiento)" target="_blank" rel="noopener">Pregunta por WhatsApp</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. PREGUNTAS FRECUENTES ===================== -->
+<section id="preguntas" class="seccion">
+  <div class="contenedor contenedor--estrecho">
+    <p class="etiqueta">Preguntas frecuentes</p>
+    <h2>Lo que más me preguntan</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Dónde está mi dinero?</summary>
+        <p>En tu propia cuenta en XTB, un bróker internacional regulado en el exterior, abierta a tu nombre. El dinero nunca pasa por mis manos: tú depositas directamente en tu cuenta.</p>
+      </details>
+      <details>
+        <summary>¿Puedo retirar cuando quiera?</summary>
+        <p>Sí. La cuenta es tuya: puedes verla 24/7 y solicitar retiros cuando quieras directamente en XTB.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto necesito para empezar?</summary>
+        <p>Desde 600 USD de capital inicial. Además puedes hacer aportes mensuales si quieres.</p>
+      </details>
+      <details>
+        <summary>¿Qué es XTB?</summary>
+        <p>XTB es un bróker internacional que te da acceso a acciones y ETFs de todo el mundo. Está regulado por autoridades financieras fuera de Colombia, no por la Superintendencia Financiera de Colombia. Al abrir tu cuenta, los documentos de XTB indican qué entidad y qué regulador te corresponden. Tú abres la cuenta a tu nombre y yo te guío en el proceso.</p>
+      </details>
+      <details>
+        <summary>¿Cómo ganas tú?</summary>
+        <p>Solo gano si tú ganas. Las condiciones exactas quedan escritas en el contrato que firmamos las dos partes. Escríbeme por WhatsApp y te las explico.</p>
+      </details>
+      <details>
+        <summary>¿Puedo perder dinero?</summary>
+        <p>Sí. Invertir en bolsa tiene riesgo y hay años negativos, a veces muy negativos. Por eso recomiendo invertir con un plazo mínimo de 3 años (ideal 5), con dinero que no vayas a necesitar pronto, y en una cartera acorde a tu perfil. Si necesitas el dinero en poco tiempo, un CDT probablemente es mejor opción.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8. CONTACTO ===================== -->
+<section id="contacto" class="seccion seccion--alterna">
+  <div class="contenedor">
+    <p class="etiqueta">Contacto</p>
+    <h2>Hablemos</h2>
+    <ul class="rejilla rejilla--3 contacto">
+      <li>
+        <a class="contacto__item" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO" target="_blank" rel="noopener">
+          <span class="contacto__tipo">WhatsApp</span>
+          <span class="contacto__dato">+57 305 431 8622</span>
+        </a>
+      </li>
+      <li>
+        <a class="contacto__item" href="https://instagram.com/fondexo" target="_blank" rel="noopener">
+          <span class="contacto__tipo">Instagram</span>
+          <span class="contacto__dato">@fondexo</span>
+        </a>
+      </li>
+      <li>
+        <a class="contacto__item" href="mailto:inversionesfondexo@gmail.com">
+          <span class="contacto__tipo">Correo</span>
+          <span class="contacto__dato">inversionesfondexo@gmail.com</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== 9. PIE DE PÁGINA ===================== -->
+<footer class="pie">
+  <div class="contenedor">
+    <p class="logo logo--pie">FONDE<span>X</span>O</p>
+    <p class="pie__legal">La información de esta página es educativa y no constituye una promesa de rentabilidad ni asesoría financiera formal. Invertir en mercados financieros implica riesgo de pérdida. Rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+    <p class="pie__copia">© <span id="anio"></span> FONDEXO · Bogotá, Colombia</p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="whatsapp-flotante" href="https://wa.me/573054318622?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20FONDEXO" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.56 4.2 1.62 6.02L4 29l8.13-1.6a12 12 0 0 0 3.9.66h.01C22.67 28.06 28 22.66 28 16.03 28 9.4 22.67 3 16.04 3zm0 22.9h-.01c-1.24 0-2.46-.25-3.6-.72l-.26-.11-4.82.95.98-4.7-.17-.28a9.86 9.86 0 0 1-1.5-5.2c0-5.47 4.45-9.92 9.39-9.92 5.47 0 9.9 4.45 9.9 9.92 0 5.6-4.44 10.06-9.91 10.06zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="comparador.js" defer></script>
+</body>
+</html>
