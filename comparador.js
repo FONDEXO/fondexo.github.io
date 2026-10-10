@@ -13,7 +13,7 @@ const CONFIG = {
     aporteMensual: 0,    // USD
     plazoAnios: 5,
     tasaCDT: 11,         // % efectivo anual
-    retencion: 4,        // % sobre los intereses del CDT
+    retencion: 4,        // % de retención en la fuente sobre los intereses del CDT (fijo, no lo cambia el visitante)
     devaluacion: 3,      // % anual del peso frente al dólar (promedio 2016–2025, ver nota abajo)
     perfil: 'moderado'
   },
@@ -187,7 +187,7 @@ const pctSigno = (x) => (x > 0 ? '+' : x < 0 ? '−' : '') + fmtNum.format(Math.
 const $ = (id) => document.getElementById(id);
 const campos = {
   monto: $('monto'), aporte: $('aporte'), plazo: $('plazo'),
-  tasaCDT: $('tasa-cdt'), retencion: $('retencion'), devaluacion: $('devaluacion'),
+  tasaCDT: $('tasa-cdt'), devaluacion: $('devaluacion'),
   verPesos: $('ver-pesos'), trm: $('trm'), historico: $('historico')
 };
 
@@ -195,7 +195,7 @@ const campos = {
   const ini = CONFIG.valoresIniciales;
   campos.monto.value = ini.monto;
   campos.aporte.value = ini.aporteMensual;
-  campos.retencion.value = ini.retencion;
+  $('nota-retencion').textContent = `Al CDT le restamos la retención en la fuente de ${ini.retencion}% sobre los intereses, que el banco descuenta automáticamente.`;
 
   for (let a = CONFIG.plazo.min; a <= CONFIG.plazo.max; a++) {
     const o = document.createElement('option');
@@ -257,7 +257,7 @@ function leerDatos() {
     aporte: Math.max(0, numero(campos.aporte)),
     plazo: parseInt(campos.plazo.value, 10),
     tasaCDT: numero(campos.tasaCDT),
-    retencion: Math.min(100, Math.max(0, numero(campos.retencion))),
+    retencion: CONFIG.valoresIniciales.retencion,
     devaluacion: numero(campos.devaluacion),
     perfil: document.querySelector('input[name="perfil"]:checked').value,
     historico: campos.historico.value,
