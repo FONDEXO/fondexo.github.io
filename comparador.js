@@ -13,7 +13,7 @@ const CONFIG = {
     aporteMensual: 0,    // USD
     plazoAnios: 5,
     tasaCDT: 11,         // % efectivo anual
-    retencion: 4,        // % de retención en la fuente sobre los intereses del CDT (fijo, no lo cambia el visitante)
+    retencion: 4,        // % de retención en la fuente sobre los intereses del CDT: tarifa oficial vigente (Decreto 572 de 2025). Fijo, el visitante no lo cambia
     devaluacion: 3,      // % anual del peso frente al dólar (promedio 2016–2025, ver nota abajo)
     perfil: 'moderado'
   },
@@ -195,7 +195,7 @@ const campos = {
   const ini = CONFIG.valoresIniciales;
   campos.monto.value = ini.monto;
   campos.aporte.value = ini.aporteMensual;
-  $('nota-retencion').textContent = `Al CDT le restamos la retención en la fuente de ${ini.retencion}% sobre los intereses, que el banco descuenta automáticamente.`;
+  $('nota-retencion').textContent = `Al CDT le restamos la retención en la fuente oficial de ${ini.retencion}% sobre los intereses (tarifa vigente para CDT en Colombia), que el banco descuenta automáticamente.`;
 
   for (let a = CONFIG.plazo.min; a <= CONFIG.plazo.max; a++) {
     const o = document.createElement('option');
