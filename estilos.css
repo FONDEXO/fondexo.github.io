@@ -207,7 +207,7 @@ img, svg { display: block; }
 .seccion--alterna { background: var(--fondo-alterno); }
 
 .rejilla { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 640px) { .rejilla--4, .rejilla--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 640px) { .rejilla--4, .rejilla--3, .rejilla--2 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .rejilla--4 { grid-template-columns: repeat(4, 1fr); } .rejilla--3 { grid-template-columns: repeat(3, 1fr); } }
 
 .tarjeta {
