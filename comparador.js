@@ -43,8 +43,8 @@ const CONFIG = {
   // Textos del recuadro "Lo que tienes que saber"
   loQueTienesQueSaber: [
     '<strong>El CDT es seguro y su resultado está garantizado; la cartera no.</strong>',
-    'Desde 1987, el índice mundial MSCI ACWI promedió cerca de 8,45% al año en dólares, con años muy negativos.',
-    'Probabilidad histórica de perder dinero en una cartera global: aproximadamente <strong>25% a 1 año, 10% a 5 años y 6% a 10 años</strong>. Por eso FONDEXO recomienda mínimo 3 años, ideal 5.'
+    'Desde 1987, el índice mundial MSCI ACWI promedió cerca de 8,8% al año en dólares, con años muy negativos (fuente: MSCI, rentabilidad bruta a enero de 2026).',
+    'En la bolsa de EE.UU. (S&amp;P 500, 1926–2016) cerca de <strong>25% de los periodos de 1 año terminaron en pérdida, 13% de los de 5 años y 5% de los de 10 años</strong> (fuente: Dimensional Fund Advisors). Por eso FONDEXO recomienda mínimo 3 años, ideal 5.'
   ]
 };
 
